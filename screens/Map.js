@@ -23,11 +23,12 @@ function Map({ navigation }) {
   const savePickedLocationHandler = useCallback(() => {
     if (!selectedLocation) {
       Alert.alert(
-        "no location picked",
+        "No location picked!",
         "You have to pick a location (by tapping on the map) first!"
       );
       return;
     }
+
     navigation.navigate("AddPlace", {
       pickedLat: selectedLocation.lat,
       pickedLng: selectedLocation.lng,
